@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="Get To Know Your Survey"
+                android:textColor="@color/colorScreenMain"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="36dp"
+                android:text="Name:"
+                android:textColor="@color/colorScreenMain"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="44dp"
+                android:text="Email: "
+                android:textColor="@color/colorScreenMain"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textName" />
+
+            <TextView
+                android:id="@+id/textAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="44dp"
+                android:text="Age:"
+                android:textColor="@color/colorScreenMain"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+            <Switch
+                android:id="@+id/switchGender"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/textFemale"
+                app:layout_constraintStart_toEndOf="@+id/textGender"
+                app:layout_constraintTop_toBottomOf="@+id/editAge" />
+
+            <TextView
+                android:id="@+id/textGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="44dp"
+                android:text="Gender: "
+                android:textColor="@color/colorScreenMain"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAge" />
+
+            <TextView
+                android:id="@+id/textMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="16dp"
+                android:text="Male"
+                android:textColor="@color/colorScreenMain"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/switchGender"
+                app:layout_constraintTop_toBottomOf="@+id/editAge" />
+
+            <TextView
+                android:id="@+id/textFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="45dp"
+                android:text="Female"
+                android:textColor="@color/colorScreenMain"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/switchGender"
+                app:layout_constraintTop_toBottomOf="@+id/editAge" />
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="44dp"
+                android:text="Date: "
+                android:textColor="@color/colorScreenMain"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textGender" />
+
+            <Spinner
+                android:id="@+id/spinMonth"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:entries="@array/monthSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/spinDay"
+                app:layout_constraintStart_toEndOf="@+id/textDate"
+                app:layout_constraintTop_toBottomOf="@+id/textGender" />
+
+            <Spinner
+                android:id="@+id/spinDay"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:entries="@array/daySpinner"
+                app:layout_constraintEnd_toStartOf="@+id/spinYear"
+                app:layout_constraintStart_toEndOf="@+id/spinMonth"
+                app:layout_constraintTop_toBottomOf="@+id/switchGender" />
+
+            <Spinner
+                android:id="@+id/spinYear"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="16dp"
+                android:entries="@array/yearSpinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinDay"
+                app:layout_constraintTop_toBottomOf="@+id/textGender" />
+
+            <TextView
+                android:id="@+id/textReady"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="176dp"
+                android:text="Are You Ready to Begin?"
+                android:textColor="@color/colorScreenMain"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDate" />
+
+            <ImageButton
+                android:id="@+id/yesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="32dp"
+                android:onClick="onYesButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/noButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textReady"
+                app:srcCompat="@drawable/yesbutton" />
+
+            <ImageButton
+                android:id="@+id/noButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginBottom="32dp"
+                android:onClick="onNoButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/yesButton"
+                app:layout_constraintTop_toBottomOf="@+id/textReady"
+                app:srcCompat="@drawable/nobutton" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="textCapWords"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textName"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textEmail"
+                app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textAge"
+                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+

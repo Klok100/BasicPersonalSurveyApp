@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nameBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="150dp"
+                android:text="                   "
+                android:textColor="@color/colorScreenMain"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textMovieSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="125dp"
+                android:text="Movie Section"
+                android:textColor="@color/colorScreenMovie"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameBanner" />
+
+            <TextView
+                android:id="@+id/textGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="32dp"
+                android:text="Favorite Genre/Categories: "
+                android:textColor="@color/colorScreenMovie"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMovieSection" />
+
+            <CheckBox
+                android:id="@+id/checkNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:layout_marginTop="16dp"
+                android:text="@string/checkNew"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textGenre" />
+
+            <CheckBox
+                android:id="@+id/checkHero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkHero"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkNew" />
+
+            <CheckBox
+                android:id="@+id/checkAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkAction"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkHero" />
+
+            <CheckBox
+                android:id="@+id/checkComedy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkComedy"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkAction" />
+
+            <CheckBox
+                android:id="@+id/checkHorror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkHorror"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkComedy" />
+
+            <CheckBox
+                android:id="@+id/checkRomance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkRomance"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkHorror" />
+
+            <CheckBox
+                android:id="@+id/checkDisney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkDisney"
+                android:textColor="@color/colorScreenMovieCheck"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkRomance" />
+
+            <TextView
+                android:id="@+id/textMovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="32dp"
+                android:text="Movies:"
+                android:textColor="@color/colorScreenMovie"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGetMovie" />
+
+            <Button
+                android:id="@+id/buttonGetMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="153dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="153dp"
+                android:onClick="getMovies"
+                android:text="Get Movies"
+                android:textColor="@color/colorScreenMovie"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkDisney" />
+
+            <Spinner
+                android:id="@+id/spinnerMovies"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="68dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textMovies"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGetMovie" />
+
+            <Button
+                android:id="@+id/buttonFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="162dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="162dp"
+                android:layout_marginBottom="32dp"
+                android:onClick="finish"
+                android:text="Finish!"
+                android:textColor="@color/colorScreenMovie"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMovies" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

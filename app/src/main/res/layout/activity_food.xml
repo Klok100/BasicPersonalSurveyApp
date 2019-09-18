@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nameBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="176dp"
+                android:text="                   "
+                android:textColor="@color/colorScreenMain"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textFoodSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="144dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="144dp"
+                android:text="Food Section"
+                android:textColor="@color/colorScreenFood"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameBanner" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="283dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDiet">
+
+                <RadioButton
+                    android:id="@+id/radioNone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radioNone"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontSizeBtnsBoxes" />
+
+                <RadioButton
+                    android:id="@+id/radioVegetarian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radioVege"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontSizeBtnsBoxes" />
+
+                <RadioButton
+                    android:id="@+id/radioOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radioOther"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontSizeBtnsBoxes" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textDiet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="32dp"
+                android:text="Dietary Habits: "
+                android:textColor="@color/colorScreenFood"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFoodSection" />
+
+            <TextView
+                android:id="@+id/textOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="8dp"
+                android:text="If other, please explain: "
+                android:textColor="@color/colorScreenFood"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <EditText
+                android:id="@+id/editOther"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textOther" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginBottom="32dp"
+                android:onClick="onContinue"
+                android:text="Continue"
+                android:textColor="@color/colorScreenFood"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkNone" />
+
+            <TextView
+                android:id="@+id/textFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintLeft"
+                android:layout_marginTop="32dp"
+                android:text="Favorite Foods:"
+                android:textColor="@color/colorScreenFood"
+                android:textSize="@dimen/fontSizeCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editOther" />
+
+            <CheckBox
+                android:id="@+id/checkSteak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:layout_marginTop="12dp"
+                android:text="@string/checkSteak"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFavorite" />
+
+            <CheckBox
+                android:id="@+id/checkBurger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkBurger"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkSteak" />
+
+            <CheckBox
+                android:id="@+id/checkSalad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkSalad"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBurger" />
+
+            <CheckBox
+                android:id="@+id/checkRice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkRice"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkSalad" />
+
+            <CheckBox
+                android:id="@+id/checkPho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkPho"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkRice" />
+
+            <CheckBox
+                android:id="@+id/checkSushi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkSushi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkPho" />
+
+            <CheckBox
+                android:id="@+id/checkTacos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkTacos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkSushi" />
+
+            <CheckBox
+                android:id="@+id/checkBurrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkBurrito"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkTacos" />
+
+            <CheckBox
+                android:id="@+id/checkNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/constraintCheck"
+                android:text="@string/checkNone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSizeBtnsBoxes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBurrito" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

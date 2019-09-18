@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorScreenMain">#00BCD4</color>
+    <color name="colorScreenFood">#19D144</color>
+    <color name="colorScreenMovie">#FF3021</color>
+    <color name="colorScreenMovieCheck">#D81B60</color>
+    <color name="colorScreenFinish">#1C0CC9</color>
+</resources>
+

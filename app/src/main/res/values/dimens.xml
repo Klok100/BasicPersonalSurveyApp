@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "constraintLeft">44dp</dimen>
+    <dimen name = "constraintCheck">66dp</dimen>
+    <dimen name = "constraintOutput">200dp</dimen>
+    <dimen name = "constraintTop">16dp</dimen>
+    <dimen name = "fontSizeOutput">18sp</dimen>
+    <dimen name = "fontSizeCategory">24sp</dimen>
+    <dimen name = "fontSizeBtnsBoxes">14sp</dimen>
+</resources>
+

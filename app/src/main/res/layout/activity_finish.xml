@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinishActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nameBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="82dp"
+                    android:layout_marginTop="32dp"
+                    android:text="                           "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="36sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="94dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Survey Summary"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameBanner" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="32dp"
+                    android:text="Name:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textSummary" />
+
+                <TextView
+                    android:id="@+id/textEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Email:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textName" />
+
+                <TextView
+                    android:id="@+id/textAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Age:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+                <TextView
+                    android:id="@+id/textUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="36dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textSummary" />
+
+                <TextView
+                    android:id="@+id/textUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="24dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserName" />
+
+                <TextView
+                    android:id="@+id/textUserAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="26dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserEmail" />
+
+                <TextView
+                    android:id="@+id/textGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Gender:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textAge" />
+
+                <TextView
+                    android:id="@+id/textUserGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="24dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserAge" />
+
+                <TextView
+                    android:id="@+id/textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Date:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textGender" />
+
+                <TextView
+                    android:id="@+id/textUserDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="26dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserGender" />
+
+                <TextView
+                    android:id="@+id/textDiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Diet:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDate" />
+
+                <TextView
+                    android:id="@+id/textUserDiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="24dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserDate" />
+
+                <TextView
+                    android:id="@+id/textFavFoods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Fav Foods:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textDiet" />
+
+                <TextView
+                    android:id="@+id/textGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Movie Genre:"
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textFavFoods" />
+
+                <TextView
+                    android:id="@+id/textFavMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintLeft"
+                    android:layout_marginTop="@dimen/constraintTop"
+                    android:text="Fav Movie: "
+                    android:textColor="@color/colorScreenFinish"
+                    android:textSize="@dimen/fontSizeCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textGenre" />
+
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="45dp"
+                    android:onClick="onSubmit"
+                    android:text="Submit"
+                    android:textColor="@color/colorScreenFinish"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/buttonShare"
+                    app:layout_constraintTop_toBottomOf="@+id/textFavMovie" />
+
+                <Button
+                    android:id="@+id/buttonShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="45dp"
+                    android:onClick="onShare"
+                    android:text="Share"
+                    android:textColor="@color/colorScreenFinish"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textFavMovie" />
+
+                <TextView
+                    android:id="@+id/textUserGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="24dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserFavFoods" />
+
+                <TextView
+                    android:id="@+id/textUserFavFoods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="24dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserDiet" />
+
+                <TextView
+                    android:id="@+id/textUserFavMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/constraintOutput"
+                    android:layout_marginTop="24dp"
+                    android:text="          "
+                    android:textColor="@color/colorScreenMain"
+                    android:textSize="@dimen/fontSizeOutput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserGenre" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</LinearLayout>
+
